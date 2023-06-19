@@ -1,15 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
- * main - entry point
- * if n<0 - n is negative
- * if n>0 - n is positive
- * is n=0 - n is zero
- */
-int main(void)
-{
-	int n;
+/**
+ * main - Entry point
+ *
+ * Return: alw 0
+ **/
+	int main(void)
+	{
+		int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -27,4 +26,4 @@ int main(void)
 	}
 
 	return (0);
-}
+	}
