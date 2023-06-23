@@ -7,16 +7,5 @@
  */
 int add(int a, int b)
 {
-	int r = a + b;
-
-	if (r >= 10)
-	{
-		_putchar('0' + (r / 10));
-		_putchar('0' + (r % 10));
-	}
-	else
-	{
-		_putchar('0' + r);
-	}
-return (0);
+return (a + b);
 }
