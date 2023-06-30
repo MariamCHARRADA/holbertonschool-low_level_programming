@@ -20,6 +20,8 @@ char *_strncpy(char *dest, char *src, int n)
 	if (n >= 0)
 	{
 		*dest = '\0';
+		dest++;
+		n--;
 	}
 	return (ptr);
 }
