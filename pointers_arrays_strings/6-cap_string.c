@@ -10,10 +10,6 @@ char *cap_string(char *s)
 	int i = 0;
 	char *p = s;
 
-	if (s[i] != '\0')
-	{
-		s[i]  = toupper(s[i]);
-	}
 	while (s[i] != '\0')
 	{
 		if (s[i] == ' ' || s[i] == '	' || s[i] == '\n' || s[i] == ','
@@ -21,8 +17,8 @@ char *cap_string(char *s)
 		|| s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
 			i++;
-			s[i] = toupper(s[i]);
 		}
+	s[i] = toupper(s[i]);
 	i++;
 	}
 	return (p);
