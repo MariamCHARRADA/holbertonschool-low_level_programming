@@ -6,12 +6,16 @@
  */
 char *cap_string(char *s)
 {
-	char *p = s;
 	int i = 0;
+	char *p = s;
 
-	if (s[i] != '\0' && s[i] >= 'a' && s[i] <= 'z')
+	if (s[i] != '\0')
 	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
 		s[i]  = s[i] - ('a' - 'A');
+		}
+		i++;
 	}
 	while (s[i] != '\0')
 	{
