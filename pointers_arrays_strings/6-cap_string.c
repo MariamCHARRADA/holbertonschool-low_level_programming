@@ -9,7 +9,7 @@ char *cap_string(char *s)
 	char *p = s;
 	int i = 0;
 
-	if (s[i] != '\0')
+	if (s[i] != '\0' && s[i] >= 'a' && s[i] <= 'z')
 	{
 		s[i]  = s[i] - ('a' - 'A');
 	}
@@ -20,9 +20,12 @@ char *cap_string(char *s)
 		|| s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
 			i++;
-			s[i] = s[i] - ('a' - 'A');
-		}
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - ('a' - 'A');
+			}
 		i++;
+		}
 	}
 	return (p);
 }
