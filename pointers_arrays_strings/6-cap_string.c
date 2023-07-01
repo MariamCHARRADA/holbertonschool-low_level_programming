@@ -7,19 +7,21 @@
  */
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i, j = 1;
 	char *p = s;
 
-	while (s[i] != '\0')
+	s[0] = toupper(s[0]);
+	while (s[j] != '\0')
 	{
+		i = j - 1;
 		if (s[i] == ' ' || s[i] == '	' || s[i] == '\n' || s[i] == ','
 		|| s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?'
 		|| s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
-			i++;
+			s[j] = toupper(s[j]);
 		}
-	s[i] = toupper(s[i]);
-	i++;
+	/*s[i] = toupper(s[i]);*/
+	j++;
 	}
 	return (p);
 }
