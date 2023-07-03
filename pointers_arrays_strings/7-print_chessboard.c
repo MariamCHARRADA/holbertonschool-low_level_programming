@@ -2,9 +2,9 @@
 /**
  * print_chessboard - prints the chessboard
  * @a: array
- * @c: char input
+ * @board: char input
  */
-void print_chessboard(char (*a)[8], char c)
+void print_chessboard(char (*a)[8], char board)
 {
 	int i = 0, j = 0;
 
@@ -12,7 +12,7 @@ void print_chessboard(char (*a)[8], char c)
 	{
 		while (j < 8)
 		{
-			a[i][j] = c;
+			a[i][j] = board;
 			j++;
 		}
 	i++;
