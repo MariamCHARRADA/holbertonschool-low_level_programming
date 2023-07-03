@@ -18,6 +18,7 @@ char *_strstr(char *haystack, char *needle)
 			if (haystack[i] == needle[j])
 				j++;
 		}
+		i++;
 		if (needle[j] == '\0')
 			return (&haystack[first]);
 		first = i + 1;
