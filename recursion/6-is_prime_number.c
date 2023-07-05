@@ -11,7 +11,7 @@ int is_prime_number(int n)
 
 	if (i * i <= n)
 	{
-		if (i * i == n && i != sqrt(n))
+		if (n % i == 0 && i != sqrt(n))
 			return (1);
 	is_prime_number(i + 1);
 	}
