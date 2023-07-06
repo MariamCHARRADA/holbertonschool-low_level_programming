@@ -1,10 +1,9 @@
 #include"main.h"
 /**
  * prog_name - print prog name
- * @argc: argc
  * @argv: argv
  */
-void prog_name(int argc, char *argv[])
+void prog_name(char *argv[])
 {
 	printf("%s\n", argv[0]);
 }
