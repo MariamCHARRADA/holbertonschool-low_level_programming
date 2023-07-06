@@ -1,9 +1,14 @@
 #include"main.h"
 /**
- * prog_name - print prog name
+ * main - print prog name
  * @argv: argv
+ * @argc: argc
+ * Return: 0
  */
-void prog_name(char *argv[])
+int main(int argc, char *argv[])
 {
+	(void)argc;
+
 	printf("%s\n", argv[0]);
+	return (0);
 }
