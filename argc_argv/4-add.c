@@ -9,6 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
+	int j;
 	int sum = 0;
 
 	if (argc < 2)
@@ -16,18 +17,20 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
-	while (*argv[i] != '\0')
+	while (i < argc)
 	{
-		if (atoi(argv[i]) >= 0)
+		j = 0;
+		while (argv[i][j])
 		{
-			sum += atoi(argv[i]);
-			printf("%d\n", sum);
-		}
-		else if (*argv[i] < '0' || *argv[i] > '9')
-		{
+			 if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
 			printf("Error\n");
 			return (1);
+			}
+		j++;
 		}
+		sum += atoi(argv[i]);
+		printf("%d\n", sum);
 		i++;
 	}
 return (0);
