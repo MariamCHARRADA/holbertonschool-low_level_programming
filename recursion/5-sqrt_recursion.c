@@ -6,13 +6,18 @@
  */
 int test(int i, int  n)
 {
-	if (i * i <= n)
+	if (i * i > n)
 	{
-		if (i * i == n)
-			return (i);
-		test(i + 1, n);
+		return (-1);
 	}
-	return (-1);
+	else if (i * i == n)
+	{
+		return (i);
+	}
+	else
+	{
+		return (test(i + 1, n));
+	}
 }
 /**
  * _sqrt_recursion - returns the natural square root of a number
