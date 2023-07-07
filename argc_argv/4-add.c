@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		if (*argv[i] >= '0' && *argv[i] <= '9')
 		{
-			sum += atoi(argv[i]) + atoi(argv[i + 1]);
+			sum += atoi(argv[i]);
 			printf("%d\n", sum);
 			return (0);
 		}
