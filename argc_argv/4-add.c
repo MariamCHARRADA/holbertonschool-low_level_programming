@@ -9,6 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
+	int sum = 0;
 
 	if (argc < 2)
 	{
@@ -19,7 +20,8 @@ int main(int argc, char *argv[])
 	{
 		if (*argv[i] >= '0' && *argv[i] <= '9')
 		{
-			printf("%d\n", atoi(argv[i]) + atoi(argv[i + 1]));
+			sum += atoi(argv[i]) + atoi(argv[i + 1]);
+			printf("%d\n", sum);
 			return (0);
 		}
 		else if (*argv[i] < '0' || *argv[i] > '9')
