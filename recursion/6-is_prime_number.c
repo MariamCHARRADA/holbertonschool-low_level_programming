@@ -8,10 +8,11 @@
  */
 int test(int i, int n)
 {
-	if (n % i == 0 && i != sqrt(n))
+	if (n % i == 0)
 		return (0);
-	else
+	else if (i > sqrt(n))
 		return (1);
+	return (test((i + 1), n));
 }
 /**
  * is_prime_number - returns 1 if input int is a prime number, else 0
