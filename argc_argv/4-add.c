@@ -10,9 +10,11 @@ int main(int argc, char *argv[])
 {
 	int i = 1;
 
+	if (argc < 1)
+		printf("%d\n", 0);
 	while (i < argc)
 	{
-		if (atoi(argv[i]) >= 0)
+		if (*argv[i] >= '0' && *argv[i] <= '9')
 		{
 			printf("%d\n", atoi(argv[i]) + atoi(argv[i + 1]));
 			return (0);
@@ -21,10 +23,6 @@ int main(int argc, char *argv[])
 		{
 			printf("Error\n");
 			return (1);
-		}
-		else
-		{
-			printf("%d\n", 0);
 		}
 		i++;
 	}
