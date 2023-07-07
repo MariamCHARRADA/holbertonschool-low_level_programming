@@ -2,6 +2,7 @@
 /**
  * test - test
  * @i: count
+ * @n: number
  * Return: i or -1
  */
 int test(int i, int  n)
