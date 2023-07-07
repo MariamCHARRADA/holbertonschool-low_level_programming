@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
-	while (i < argc)
+	while (argv[i] != '\0')
 	{
 		if (*argv[i] >= '0' && *argv[i] <= '9')
 		{
