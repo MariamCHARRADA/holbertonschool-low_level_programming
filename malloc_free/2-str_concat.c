@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	strcpy(s, s1);
 	i = strlen(s1);
-	j = 0;		
+	j = 0;
 	while (s2[j] != '\0')
 	{
 		s[i] = s2[j];
