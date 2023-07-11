@@ -9,7 +9,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	int i;
+	int i, j;
 
 	if (s1 == NULL)
 		s1 = " ";
@@ -20,10 +20,12 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	strcpy(s, s1);
 		i = strlen(s1) + 1;
-		while (s2[i] != '\0')
+		j = 0;
+		while (s2[j] != '\0')
 		{
-			s[i] = s2[i];
+			s[i] = s2[j];
 			i++;
+			j++;
 		}
 	s[i] = '\0';
 	return (s);
