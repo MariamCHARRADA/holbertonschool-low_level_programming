@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	if (s == NULL)
 		return (NULL);
 	strcpy(s, s1);
-		i = strlen(s1);
+		i = strlen(s1) + 1;
 		while (s2[i] != '\0')
 		{
 			s[i] = s2[i];
