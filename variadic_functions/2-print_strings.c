@@ -10,10 +10,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list arg;
 	unsigned int i;
+	char *ptr = va_arg(arg, char *);
 
+	if (separator == NULL)
+		separator = "";
 	va_start(arg, n);
 	for (i = 0; i < n - 1; i++)
 	{
+		if (ptr == NULL)
+			ptr = "(nil)";
 		printf("%s%s", va_arg(arg, char *), separator);
 	}
 	printf("%s\n", va_arg(arg, char *));
