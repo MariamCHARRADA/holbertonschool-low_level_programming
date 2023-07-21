@@ -26,6 +26,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%s%s", ptr, separator);
 	}
 	}
+	else
+	{
+		printf("\n");
+	}
 	ptr = va_arg(arg, char *);
 	if (ptr == NULL)
 		printf("%s\n", "(nil)");
