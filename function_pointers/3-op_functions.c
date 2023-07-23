@@ -1,5 +1,4 @@
 #include "3-calc.h"
-#include <stdrlib.h>
 /**
  * op_add - adds two integers
  * @a: int
@@ -8,9 +7,7 @@
  */
 int op_add(int a, int b)
 {
-	if (a != NULL && b != NULL)
 		return (a + b);
-	return (NULL);
 }
 /**
  * op_sub - subtitute
@@ -20,9 +17,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	if (a != NULL && b != NULL)
-		return (a + b);
-	return (NULL);
+		return (a - b);
 }
 /**
  * op_add - multiplies two integers
@@ -32,9 +27,7 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	if (a != NULL)
 		return (a * b);
-	return (NULL);
 }
 /**
  * op_div - devision
