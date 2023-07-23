@@ -4,6 +4,7 @@
 /**
  * get_op_func - selects the correct function
  * @s: string containing the operator
+ * Return: pointer to calculator function or NULL
  */
 int (*get_op_func(char *s))(int, int)
 {

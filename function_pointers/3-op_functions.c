@@ -20,7 +20,7 @@ int op_sub(int a, int b)
 		return (a - b);
 }
 /**
- * op_add - multiplies two integers
+ * op_mul - multiplies two integers
  * @a: int
  * @b: int
  * Return: product or NULL
