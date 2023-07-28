@@ -11,10 +11,10 @@ void print_all(const char * const format, ...)
 	va_list arg;
 	char *sep, *str;
 
-	if (format == NULL)
-		printf("\n");
 	sep = "";
 	va_start(arg, format);
+	if (format == NULL)
+		printf("\n");
 	if (format[i])
 	{
 		while (format[i] != '\0')
