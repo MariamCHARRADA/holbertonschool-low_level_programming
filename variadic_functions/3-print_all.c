@@ -13,9 +13,7 @@ void print_all(const char * const format, ...)
 
 	sep = "";
 	va_start(arg, format);
-	if (format == NULL)
-		printf("\n");
-	if (format[i])
+	if (!format[i])
 	{
 		while (format[i] != '\0')
 		{
