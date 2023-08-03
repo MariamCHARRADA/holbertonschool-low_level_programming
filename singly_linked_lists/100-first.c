@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * first - prints text before the main function
+ * premain - prints text before the main function
  */
-void first(void)
+void __attribute__ ((__constructor__)) premain()
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
