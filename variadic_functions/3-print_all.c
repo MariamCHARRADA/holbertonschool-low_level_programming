@@ -13,6 +13,8 @@ void print_all(const char * const format, ...)
 
 	sep = "";
 	va_start(arg, format);
+	if (format != NULL)
+	{
 	if (format[i] != '\0')
 	{
 		while (format[i] != '\0')
@@ -41,6 +43,7 @@ void print_all(const char * const format, ...)
 			i++;
 			sep = ", ";
 		}
+	}
 	}
 	printf("\n");
 	va_end(arg);
