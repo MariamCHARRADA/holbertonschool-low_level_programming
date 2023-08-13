@@ -24,13 +24,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	element = ht->array[index];
 
 	if (strcmp(key, element->key) == 0)
-	{	
+	{
 		element->value = strdup(value);
 		return (1);
 	}
+
+	new = malloc(sizeof(hash_node_t));
+	 if (new == NULL)
+		return (0);
+
 	new->key = strdup(key);
 	new->value = strdup(value);
-	new->next = element;
+	new->next = ht->array[index];
 	ht->array[index] = new;
 	return (1);
 }
