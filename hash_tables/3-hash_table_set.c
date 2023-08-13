@@ -21,8 +21,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while (element != NULL) /* until list end */
 	{
-		if (strcmp(key, element->key) == 0)
+		if (strcmp(element->key, key) == 0)
 		{
+			free(element->value);
 			element->value = strdup(value);
 			return (1);
 		}
