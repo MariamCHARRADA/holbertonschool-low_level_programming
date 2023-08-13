@@ -1,4 +1,4 @@
-#IFNDEF sizemacroo
-#DEFINE sizemacroo
-#DEFINE SIZE 1024
-#ENDIF
+#ifndef sizemacroo
+#define sizemacroo
+#define SIZE 1024
+#endif
